@@ -1,26 +1,115 @@
-:root {
-    --dksienna: #230007;
-    --citrine: #D7CF07;
-    --fulvous: #D98324;
-    --rufous: #A40606;
-    --rosewood: #5A0002;
-    --font-size: 1.3rem;
-    
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla&display=swap');
+
+:root {
+    --gainsboro: #E1E1E1;
+    --aureolin: #FFEE32;
+    --cybyellow: #FFD100;
+    --erblack: #1D1D1D;
+    --jet: #333533;
+
+    --font-size: 1.3rem;
+    --padding: 4.4rem 6rem;
+}
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     height: 100vh;
     font-family: 'Inconsolata';
 }
 
-h1 {
+p {
+    margin: 1rem 0;
+}
+
+.font {
     font-family: 'Karla';
+}
+
+.header {
+    padding: 3rem 1rem;
+    background-color: var(--erblack);
+    color: var(--gainsboro);
+}
+
+.logo{
+    margin: 0;
+}
+
+.logo span{
+    color: var(--aureolin)
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro {
+    margin: 6rem 0;
+}
+
+.name {
+    display: block;
+    font-size: 3rem;
+    color: var(--aureolin);
+    margin: 1rem 0;
+    font-weight: bold;
+
+}
+.nav-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: var(--nyanza);
+    margin: 2rem .5rem;
+
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: var(--aureolin)
+}
+
+.title {
+    font-size: 3rem;
+    margin: 1.5rem 0;
+}
+
+#projects {
+    background-color: var(--jet);
+}
+
+.projects-title {
+    margin: 0;
+}
+
+
+
+.projects-box p{
+    margin: 0;
+}
+
+
+
+
+
+#contact {
+    background-color: var(--cybyellow) ;
+}
+
+.contact-title {
+    margin: 0;
+}
+
+.footer {
+    background-color: var(--erblack);
 }
