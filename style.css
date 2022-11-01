@@ -1,3 +1,13 @@
+:root {
+    --dksienna: #230007;
+    --citrine: #D7CF07;
+    --fulvous: #D98324;
+    --rufous: #A40606;
+    --rosewood: #5A0002;
+    --font-size: 1.3rem;
+    
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla&display=swap');
 
 * {
