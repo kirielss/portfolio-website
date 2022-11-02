@@ -6,6 +6,7 @@
     --cybyellow: #FFD100;
     --erblack: #1D1D1D;
     --jet: #333533;
+    --redorange: #FF3F00;
 
     --font-size: 1.3rem;
     --padding: 4.4rem 6rem;
@@ -13,35 +14,42 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
 }
 
 body {
+    margin: 0;
+    padding: 0;
     height: 100vh;
     font-family: 'Inconsolata';
-}
-
-p {
-    margin: 1rem 0;
+    color: var(--gainsboro);
 }
 
 .font {
     font-family: 'Karla';
+    font-weight: bold;
 }
 
 .header {
     padding: 3rem 1rem;
     background-color: var(--erblack);
-    color: var(--gainsboro);
 }
 
 .logo{
     margin: 0;
 }
 
+.logo a{
+    text-decoration: none;
+    color: var(--gainsboro);
+}
+
 .logo span{
     color: var(--aureolin)
+}
+
+.logo span:hover{
+    color: var(--redorange);
 }
 
 .nav {
@@ -51,7 +59,7 @@ p {
 }
 
 .intro {
-    margin: 6rem 0;
+    margin: 5rem 0;
 }
 
 .name {
@@ -69,7 +77,7 @@ p {
 
 .nav-bar a {
     text-decoration: none;
-    color: var(--nyanza);
+    color: gainsboro;
     margin: 2rem .5rem;
 
 }
@@ -86,30 +94,211 @@ p {
 
 #projects {
     background-color: var(--jet);
+    padding: 3rem 1rem 6rem;
 }
 
 .projects-title {
-    margin: 0;
+    margin: 0 0 4rem;
+    font-size: 2.5rem;
 }
 
-
+.projects-box {
+    position: relative;
+}
 
 .projects-box p{
     margin: 0;
 }
 
+.image-border {
+    border: 2px solid var(--cybyellow);
+    padding: .5rem;
+    border-radius: 2rem;
+    background-color: var(--erblack);
+    max-width: 740px;
+}
 
+.image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: calc(60vh + 1em);
+    border-radius: 2rem;
+}
 
+.img-1 {
+    background-image: url("img/wordmasters.png");
 
+}
+.img-2 {
+    background-image: url("img/sunnyside.png");
+}
+.img-3 {
+    background-image: url("img/huddle.png");
+}
+
+.details {
+    margin: 4rem 0 2rem;
+}
+
+.details-anchor{
+    text-decoration: none;
+    color: var(--aureolin);
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 0;
+}
+
+.details-textbox {
+    background-color: var(--erblack);
+    border-radius: .5rem;
+    margin: 1rem 0;
+}
+
+.details-textbox p {
+    padding: 1rem;
+}
+
+.details-textbox a {
+    color: var(--cybyellow)
+}
 
 #contact {
-    background-color: var(--cybyellow) ;
+    background-color: var(--cybyellow);
+    color: var(--erblack);
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem
+}
+
+.zap {
+    background-color: var(--erblack);
+    margin: 2rem 0;
+    color: var(--gainsboro);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 2rem;
+}
+
+.fa-whatsapp{
+    font-size: 2rem;
+    margin-right: .5rem;
 }
 
 .contact-title {
     margin: 0;
+    font-size: 2.5rem;
 }
 
 .footer {
     background-color: var(--erblack);
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-title {
+    margin: .2rem;
+}
+
+.footer h3 {
+    font-size: 2rem;
+}
+
+.footer h4 {
+    font-size: 1.5rem;
+}
+
+.socials {
+    font-size: 3rem;
+    margin: 2rem;
+}
+
+@media screen and (min-width:800px) {
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.5rem;
+    }
+
+    .nav-bar a{
+        margin: 1rem 1rem;
+    }
+
+    .header {
+        padding: 3rem 6rem;
+    }
+
+    .intro {
+        margin: 8rem 0;
+    }
+
+    .name {
+        font-size: 4rem;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+    #projects {
+        padding: 3rem 6rem;
+    }
+
+    .projects-box {
+        margin: 6rem 0;
+    }
+
+    .image-border {
+        width: 50vw;
+        height: 40%;
+    }
+
+    .details.left {
+        direction:rtl;
+        width: 50vw;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        right: 0
+    }
+
+    .projects-box:nth-of-type(2){
+        direction: rtl;
+    }
+
+    .details.right {
+        direction: ltr;
+        width: 50vw;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    a:hover {
+        color: #FF3F00;
+    }
+    
+    .icon:hover, .socials a:hover {
+        filter: brightness(0) saturate(100%) invert(31%) sepia(37%) saturate(5517%) hue-rotate(1deg) brightness(104%) contrast(109%);
+    }
+
+    .zap p:hover {
+        color: orangered;
+        text-decoration: underline;
+    }
 }
