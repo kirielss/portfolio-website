@@ -9,24 +9,22 @@
     --redorange: #FF3F00;
 
     --font-size: 1.3rem;
-    --padding: 4.4rem 6rem;
 }
 
 * {
     box-sizing: border-box;
-
 }
 
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    font-family: 'Inconsolata';
+    font-family: 'Inconsolata', sans-serif;
     color: var(--gainsboro);
 }
 
 .font {
-    font-family: 'Karla';
+    font-family: 'Karla', Verdana Tahoma, sans-serif;
     font-weight: bold;
 }
 
@@ -110,14 +108,6 @@ body {
     margin: 0;
 }
 
-.image-border {
-    border: 2px solid var(--cybyellow);
-    padding: .5rem;
-    border-radius: 2rem;
-    background-color: var(--erblack);
-    max-width: 740px;
-}
-
 .image {
     background-size: cover;
     background-repeat: no-repeat;
@@ -125,6 +115,8 @@ body {
     width: 100%;
     height: calc(60vh + 1em);
     border-radius: 2rem;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
+    border: 2px solid var(--erblack);
 }
 
 .img-1 {
@@ -136,6 +128,10 @@ body {
 }
 .img-3 {
     background-image: url("img/huddle.png");
+}
+
+.foto {
+    background-image: url("img/gabriel.png");
 }
 
 .details {
@@ -176,7 +172,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25rem
+    width: 26rem
 }
 
 .zap {
@@ -227,7 +223,16 @@ body {
     margin: 2rem;
 }
 
+.gradient {
+    background: linear-gradient(90deg, rgba(255,238,50,1) 0%, rgba(255,63,0,1) 100%);
+    height: 3px;
+}
+
 @media screen and (min-width:800px) {
+    body {
+        font-size: 120%;
+    }
+
     .nav {
         flex-direction: row;
         justify-content: space-between;
@@ -256,24 +261,44 @@ body {
 
     #projects {
         padding: 3rem 6rem;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
     }
 
     .projects-box {
         margin: 6rem 0;
+        max-width: 1600px;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 1rem;
     }
 
-    .image-border {
-        width: 50vw;
-        height: 40%;
+    .image {
+        grid-column:1/6;
+        grid-row:1/2;
+    }
+
+    .details {
+        grid-column:5/11;
+        grid-row:1/2;
+        order: 2;
+        margin: 0;
+        text-align: justify;
+    }
+
+    .foto {
+        grid-column:1/4;
+        grid-row:1/2;
+    }
+
+    .details-about {
+        grid-column:4/11;
+        grid-row:1/2;
     }
 
     .details.left {
         direction:rtl;
-        width: 50vw;
-        margin: 0;
-        position: absolute;
-        top: 0;
-        right: 0
     }
 
     .projects-box:nth-of-type(2){
@@ -282,11 +307,6 @@ body {
 
     .details.right {
         direction: ltr;
-        width: 50vw;
-        margin: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
     }
 
     a:hover {
